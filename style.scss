@@ -1,7 +1,7 @@
 $paddingred: 16px;
 $paddingblue: 8px;
 
-@mixin boxshadow($theme: Grey){
+@mixin boxshadow{
   color: rgba(255, 255, 255, 0.75);
   padding: 10px 10px 19px -4px;
 }
@@ -10,13 +10,10 @@ $paddingblue: 8px;
   @include boxshadow;
 }
 
-h6 {
-  padding: $paddingred, $paddingblue * 2;
-}
 
 article {
 
-  article section {
+  section {
     flex-grow: 1;
     flex-basis: 45%;
     border: 1px silver solid;
@@ -29,11 +26,11 @@ article {
     overflow: auto;
     box-sizing: border-box;
   }
-  article section#selling-points {
+  section#selling-points {
     flex-grow: 2;
     flex-basis: 100%
   }
-  article code {
+  code {
     background: #000;
     border: 1px solid #ddd;
     color: #666;
@@ -48,16 +45,14 @@ article {
     display: block;
     word-wrap: break-word
   }
-  article code.before {
+  code.before {
     float: left;
     width: 40%
   }
-  article code.after {
+  code.after {
     float: right;
     width: 40%
   }
-
-
   display: flex;
   flex-wrap: wrap
 }

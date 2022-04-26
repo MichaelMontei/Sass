@@ -3,15 +3,11 @@
   padding: 10px 10px 19px -4px;
 }
 
-h6 {
-  padding: 16px, 16px;
-}
-
 article {
   display: flex;
   flex-wrap: wrap;
 }
-article article section {
+article section {
   flex-grow: 1;
   flex-basis: 45%;
   border: 1px silver solid;
@@ -24,11 +20,11 @@ article article section {
   overflow: auto;
   box-sizing: border-box;
 }
-article article section#selling-points {
+article section#selling-points {
   flex-grow: 2;
   flex-basis: 100%;
 }
-article article code {
+article code {
   background: #000;
   border: 1px solid #ddd;
   color: #666;
@@ -43,11 +39,11 @@ article article code {
   display: block;
   word-wrap: break-word;
 }
-article article code.before {
+article code.before {
   float: left;
   width: 40%;
 }
-article article code.after {
+article code.after {
   float: right;
   width: 40%;
 }
