@@ -1,5 +1,5 @@
-$paddingred: 16px;
-$paddingblue: 8px;
+$red: 16px;
+$blue: 8px;
 
 @mixin boxshadow{
   color: rgba(255, 255, 255, 0.75);
@@ -8,6 +8,24 @@ $paddingblue: 8px;
 
 .article section {
   @include boxshadow;
+}
+
+h6 {
+  font-size: 2em;
+  padding: $red*2;
+  margin-bottom: 0px
+}
+
+body {
+  font: 100% "Space Mono", monospace;
+  color: #2748B3;
+  margin: 0px;
+  padding: 0px;
+  background-color: #000;
+  background-image: radial-gradient(#fff, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(#fff, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(#fff, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  background-attachment: fixed
 }
 
 
@@ -71,14 +89,17 @@ article {
 
 .succes {
   @extend %warning-shared;
+  background-color: green;
 }
 
 .error {
   @extend %warning-shared;
+  background-color: red;
 }
 
 .warning {
   @extend %warning-shared;
+  background-color: orange;
 }
 
 
