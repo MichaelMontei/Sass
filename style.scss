@@ -1,7 +1,7 @@
 $red: 16px;
 $blue: 8px;
 
-@mixin boxshadow{
+@mixin boxshadow {
   color: rgba(255, 255, 255, 0.75);
   padding: 10px 10px 19px -4px;
 }
@@ -10,11 +10,22 @@ $blue: 8px;
   @include boxshadow;
 }
 
+@mixin align{
+  text-align: center;
+}
+
 h6 {
+  @include align;
   font-size: 2em;
   padding: $red*2;
-  margin-bottom: 0px
+  margin-bottom: 0px;
 }
+
+h1 {
+  @include align;
+}
+
+
 
 body {
   font: 100% "Space Mono", monospace;
@@ -44,10 +55,12 @@ article {
     overflow: auto;
     box-sizing: border-box;
   }
+
   section#selling-points {
     flex-grow: 2;
     flex-basis: 100%
   }
+
   code {
     background: #000;
     border: 1px solid #ddd;
@@ -63,14 +76,17 @@ article {
     display: block;
     word-wrap: break-word
   }
+
   code.before {
     float: left;
     width: 40%
   }
+
   code.after {
     float: right;
     width: 40%
   }
+
   display: flex;
   flex-wrap: wrap
 }
@@ -87,7 +103,7 @@ article {
   @extend %warning-shared;
 }
 
-.succes {
+.success {
   @extend %warning-shared;
   background-color: green;
 }
